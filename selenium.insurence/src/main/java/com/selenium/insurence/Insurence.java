@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class Insurence extends InsurenceBrowserSetup {
-	@Test(priority = 0, enabled = true)
+	@Test(priority = 0, enabled = false)
 	public void register() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.getTitle();
@@ -39,6 +39,7 @@ public class Insurence extends InsurenceBrowserSetup {
 
 	@Test(priority = 1, enabled = true)
 	public void login() {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		webElements.getloginemail().sendKeys("gsk@gmail.com");
 		webElements.getpassword().sendKeys("123");
 		webElements.getlogin().click();

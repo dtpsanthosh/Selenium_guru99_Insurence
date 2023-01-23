@@ -153,7 +153,7 @@ public class InsurenceWebElements {
 		return loginemail;
 	}
 
-	@FindBy(id = "password")
+	@FindBy(xpath = "/html/body/div[3]/form/div[2]/input")
 	WebElement loginpassword;
 
 	public WebElement getloginPassword() {
